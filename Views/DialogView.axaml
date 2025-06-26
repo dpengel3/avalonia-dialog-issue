@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:aui_dialog.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="aui_dialog.Views.DialogView"
+        Title="DialogView"
+        x:DataType="vm:DialogViewModel">
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Orientation="Vertical">
+        <TextBlock 
+            Margin="20"
+            HorizontalAlignment="Center"
+            Text="{Binding Text}"/>
+        <Button 
+            Margin="20"
+            Padding="10"
+            HorizontalAlignment="Center"
+            Command="{Binding CloseCommand}"
+            Content="Close"/>
+    </StackPanel>
+</Window>
